@@ -1,5 +1,6 @@
 stages:
 - name: Build
   steps:
-    shellScript: |-
-      docker build -f python3.6/Dockerfile -t opencv-python:latest python3.6/
+  - runScriptConfig:  
+      shellScript: |-
+        docker build -f python3.6/Dockerfile -t opencv-python:latest python3.6/
